@@ -1,0 +1,38 @@
+<div class="content-basic">
+    <div class="section-finder">
+        <div class="finder">
+            <form [formGroup]="finderForm">
+                <select (change)="initializerMunicipality()" formControlName="departmentId">
+                    <option value="">Elija un departamento</option>
+                    <option *ngFor="let dept of departmentList; let i = index" [value]="dept.localizacionId">
+                        {{dept.descripcion}}</option>
+                </select>
+            </form>
+        </div>
+        <div class="findName" *ngIf="municipalityListBackup.length > 0">
+            <form [formGroup]="findByNameForm">
+                <input type="text" formControlName="nameTo" (input)="findByName()" placeholder="Busque un municipio">
+            </form>
+        </div>
+        <div class="results" *ngIf="municipalityList.length > 0">
+            <table class="contentResult">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let muni of municipalityList | paginate: { itemsPerPage: 30, currentPage: z }">
+                        <td>{{muni.localizacionId}}</td>
+                        <td>{{muni.descripcion}}</td>
+                    </tr>
+                </tbody>
+                <div class="conte_pagination_control" *ngIf="municipalityList.length > 30">
+                    <pagination-controls (pageChange)="z = $event" maxSize="7" previousLabel="Anterior"
+                        nextLabel="Siguiente" class="my-pagination"></pagination-controls>
+                </div>
+            </table>
+        </div>
+    </div>
+</div>

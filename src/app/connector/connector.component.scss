@@ -1,0 +1,140 @@
+$primary-color: rgb(0, 100, 176);
+$gray-005: rgba(0, 0, 0, 0.05);
+$gray-01: rgba(0, 0, 0, 0.1);
+$gray-02: rgba(0, 0, 0, 0.2);
+$gray-07: rgba(0, 0, 0, 0.7);
+$white-1: rgba(255, 255, 255, 1);
+$font-family: Arial, Helvetica, sans-serif;
+.content-basic {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder {
+    width: 90%;
+    max-width: 555px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .finder {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray-01;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.content-basic .section-finder .finder select {
+    width: 250px;
+    background-color: $white-1;
+    border: solid 1px $gray-02;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: $gray-07;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.content-basic .section-finder .findName {
+    background-color: $primary-color;
+    width: 100%;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.content-basic .section-finder .findName input {
+    width: 250px;
+    background-color: $white-1;
+    border: solid 1px $gray-02;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: $gray-07;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.content-basic .section-finder .results {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .results table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .results table thead {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .results table thead tr {
+    padding: 7px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .results table thead tr th {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    font-size: 17px;
+    font-weight: 600;
+    border-right: solid 1px $gray-02;
+}
+.content-basic .section-finder .results table thead tr th:last-child {
+    border-right: none;
+}
+.content-basic .section-finder .results table tbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .results table tbody tr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-basic .section-finder .results table tbody tr td {
+    width: 50%;
+    margin: 0px;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: $gray-005;
+    border-right: solid 1px $white-1;
+    border-bottom: solid 1px $white-1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.my-pagination .ngx-pagination .current {
+    background: $primary-color;
+}
